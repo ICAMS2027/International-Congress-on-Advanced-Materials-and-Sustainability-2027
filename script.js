@@ -1,213 +1,71 @@
-/* =========================================================
-   ICAMS 2027
-   HOME — Main JavaScript
-========================================================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".site-header");
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+  const modal = document.getElementById("comingSoonModal");
+  const modalClose = document.getElementById("modalClose");
+  const modalButton = document.getElementById("modalButton");
+  const futureLinks = document.querySelectorAll(".future-link");
+  const futureActions = document.querySelectorAll(".future-action");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-
-/* =========================================================
-   1. ELEMENTS
-========================================================= */
-
-const header = document.querySelector(".site-header");
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-
-const modal = document.getElementById("comingSoonModal");
-const modalClose = document.getElementById("modalClose");
-const modalButton = document.getElementById("modalButton");
-
-const futureLinks = document.querySelectorAll(".future-link");
-const futureActions = document.querySelectorAll(".future-action");
-
-
-/* =========================================================
-   2. HEADER SCROLL EFFECT
-========================================================= */
-
-function updateHeader() {
-
-    if (window.scrollY > 30) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
+  // Transición del Header al hacer Scroll
+  function updateHeader() {
+    if (header) {
+      if (window.scrollY > 30) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
     }
-}
+  }
 
-window.addEventListener(
-    "scroll",
-    updateHeader,
-    { passive: true }
-);
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
 
-updateHeader();
+  // Control del Menú Hamburguesa
+  function toggleMobileMenu() {
+    if (!mainNav || !menuToggle) return;
+    const isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
 
-
-/* =========================================================
-   3. MOBILE NAVIGATION
-========================================================= */
-
-function toggleMobileMenu() {
-
-    const isOpen =
-        mainNav.classList.toggle("open");
-
-    menuToggle.classList.toggle(
-        "open",
-        isOpen
-    );
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-}
-
-
-menuToggle.addEventListener(
-    "click",
-    toggleMobileMenu
-);
-
-
-/* =========================================================
-   4. CLOSE MOBILE MENU
-========================================================= */
-
-function closeMobileMenu() {
-
+  function closeMobileMenu() {
+    if (!mainNav || !menuToggle) return;
     mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
 
-    menuToggle.classList.remove("open");
+  if (menuToggle) menuToggle.addEventListener("click", toggleMobileMenu);
+  navLinks.forEach((link) => link.addEventListener("click", closeMobileMenu));
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
-}
-
-
-document.querySelectorAll(
-    ".nav-link"
-).forEach(link => {
-
-    link.addEventListener(
-        "click",
-        closeMobileMenu
-    );
-
-});
-
-
-/* =========================================================
-   5. COMING SOON MODAL
-========================================================= */
-
-function openComingSoonModal(event) {
-
-    event.preventDefault();
-
+  // Modal Control
+  function openModal(e) {
+    if (e) e.preventDefault();
+    if (!modal) return;
     modal.classList.add("active");
-
-    modal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
+    modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    if (modalClose) modalClose.focus();
+  }
 
-    modalClose.focus();
-}
-
-
-function closeComingSoonModal() {
-
+  function closeModal() {
+    if (!modal) return;
     modal.classList.remove("active");
-
-    modal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
+    modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+  }
 
-}
+  futureLinks.forEach((link) => link.addEventListener("click", openModal));
+  futureActions.forEach((btn) => btn.addEventListener("click", openModal));
 
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modalButton) modalButton.addEventListener("click", closeModal);
 
-/* Future navigation items */
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
 
-futureLinks.forEach(link => {
-
-    link.addEventListener(
-        "click",
-        openComingSoonModal
-    );
-
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal && modal.classList.contains("active")) closeModal();
+  });
 });
-
-
-/* Future action buttons */
-
-futureActions.forEach(button => {
-
-    button.addEventListener(
-        "click",
-        openComingSoonModal
-    );
-
-});
-
-
-/* Close button */
-
-modalClose.addEventListener(
-    "click",
-    closeComingSoonModal
-);
-
-modalButton.addEventListener(
-    "click",
-    closeComingSoonModal
-);
-
-
-/* =========================================================
-   6. CLOSE MODAL WHEN CLICKING OUTSIDE
-========================================================= */
-
-modal.addEventListener(
-    "click",
-    event => {
-
-        if (event.target === modal) {
-
-            closeComingSoonModal();
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   7. CLOSE MODAL WITH ESCAPE
-========================================================= */
-
-document.addEventListener(
-    "keydown",
-    event => {
-
-        if (
-            event.key === "Escape" &&
-            modal.classList.contains("active")
-        ) {
-
-            closeComingSoonModal();
-
-        }
-
-    }
-);
