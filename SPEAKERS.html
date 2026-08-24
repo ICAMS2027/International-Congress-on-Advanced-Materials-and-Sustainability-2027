@@ -1,35 +1,48 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>International Congress on Advanced Materials and Sustainability 2027</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; }
-        nav { background: #004b8d; padding: 12px; }
-        nav a { color: white; margin-right: 20px; text-decoration: none; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .container { padding: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speakers | ICAMS 2027</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container-navigation">
+      <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="ABOUT.html" class="nav-link">ABOUT</a>
+        <a href="TOPICS.html" class="nav-link">TOPICS</a>
+        <a href="SPEAKERS.html" class="nav-link active">SPEAKERS</a>
+        <a href="PROGRAM.html" class="nav-link">PROGRAM</a>
+        <a href="ABSTRACTS.html" class="nav-link">ABSTRACTS</a>
+        <a href="REGISTRATION.html" class="nav-link">REGISTRATION</a>
+        <a href="PUBLICATIONS.html" class="nav-link">PUBLICATIONS</a>
+        <a href="VENUE.html" class="nav-link">VENUE</a>
+        <a href="COMMITTEE.html" class="nav-link">COMMITTEE</a>
+        <a href="CONTACT.html" class="nav-link">CONTACT</a>
+      </nav>
+    </div>
+  </header>
 
-<nav>
-    <a href="index.html">HOME</a>
-    <a href="ABOUT.html">ABOUT</a>
-    <a href="TOPICS.html">TOPICS</a>
-    <a href="SPEAKERS.html">SPEAKERS</a>
-    <a href="PROGRAM.html">PROGRAM</a>
-    <a href="ABSTRACTS.html">ABSTRACTS</a>
-    <a href="REGISTRATION.html">REGISTRATION</a>
-    <a href="PUBLICATIONS.html">PUBLICATIONS</a>
-    <a href="VENUE.html">VENUE</a>
-    <a href="COMMITTEE.html">COMMITTEE</a>
-    <a href="CONTACT.html">CONTACT</a>
-</nav>
+  <main class="page-container">
+    <section class="content-card">
+      <h1>Keynote Speakers</h1>
+      <p>Distinguished international keynote and plenary speakers will be announced soon.</p>
+    </section>
+  </main>
 
-<div class="container">
-    <h1>International Congress on Advanced Materials and Sustainability 2027</h1>
-    <p>A forum designed to highlight the diversity and depth of contemporary materials research.</p>
-</div>
+  <div class="modal" id="comingSoonModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2>ICAMS 2027</h2>
+      <button class="btn" id="modalButton">Close</button>
+    </div>
+  </div>
 
+  <footer><p>&copy; 2027 ICAMS. All Rights Reserved.</p></footer>
+  <script src="script.js"></script>
 </body>
 </html>
