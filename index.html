@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- Sticky Header -->
   <header class="site-header">
     <div class="container-navigation">
       <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
@@ -28,52 +29,94 @@
     </div>
   </header>
 
-  <main class="page-container">
-    <section class="content-card" style="text-align: center; padding: 50px 20px;">
-      <h1>ICAMS 2027</h1>
-      <h2 style="color: var(--accent); margin-bottom: 10px;">International Congress on Advanced Materials and Sustainability</h2>
-      <p style="font-size: 1.1rem; font-weight: bold; color: var(--text-light);">Advanced Materials for Electronics, Energy and a Sustainable Future</p>
-      <p>Mazatlán, Sinaloa, Mexico | 2027</p>
-      <p><span style="background: var(--primary); padding: 4px 12px; border-radius: 20px; font-size: 0.9rem;">Hybrid Conference — On-site & Online</span></p>
-      
-      <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-        <a href="ABSTRACTS.html" class="btn">SUBMIT ABSTRACT</a>
-        <button class="btn future-action" style="background: #334155;">REGISTER NOW</button>
-      </div>
-    </section>
+  <!-- Hero Section (Estilo IMRC 2026) -->
+  <section class="hero-banner">
+    <div class="badge-hybrid">
+      <span>&#127760; Hybrid Conference — On-site & Online</span>
+    </div>
+    <h1 class="hero-title">ICAMS 2027</h1>
+    <h2 class="hero-subtitle">International Congress on Advanced Materials and Sustainability</h2>
+    <p class="hero-theme">Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+    
+    <div class="hero-meta">
+      <span>&#128204; Mazatlán, Sinaloa, Mexico</span>
+      <span>&bull;</span>
+      <span>&#128197; 2027</span>
+    </div>
 
+    <div class="cta-group">
+      <a href="ABSTRACTS.html" class="btn btn-accent">SUBMIT ABSTRACT</a>
+      <button class="btn btn-primary future-action">REGISTER NOW</button>
+    </div>
+  </section>
+
+  <!-- Highlights Strip Bar -->
+  <div class="highlights-bar">
+    <div class="highlight-item">
+      <div class="highlight-label">Conference Format</div>
+      <div class="highlight-value">Hybrid (On-site & Online)</div>
+    </div>
+    <div class="highlight-item accent-border">
+      <div class="highlight-label">Abstract Submissions</div>
+      <div class="highlight-value">Opening Soon</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-label">Location</div>
+      <div class="highlight-value">Mazatlán, Mexico</div>
+    </div>
+    <div class="highlight-item accent-border">
+      <div class="highlight-label">Dates</div>
+      <div class="highlight-value">2027</div>
+    </div>
+  </div>
+
+  <!-- Main Content Areas -->
+  <main class="page-container">
     <section class="content-card">
       <h2>Scientific Areas</h2>
-      <p style="color: var(--accent); font-weight: bold; line-height: 1.8;">
+      <p style="color: var(--ocean-cyan); font-weight: 600; font-size: 1.1rem; line-height: 1.8;">
         Advanced Materials &middot; Electronic Materials &middot; Semiconductor Materials &middot; Nanomaterials &middot; Optoelectronics &middot; Energy Materials &middot; Photocatalysis &middot; Sustainable Technologies
       </p>
     </section>
 
     <section class="content-card">
       <h2>Important Dates</h2>
-      <ul style="list-style: none; line-height: 2; padding: 0;">
-        <li><strong>Abstract Submission Opens:</strong> Coming Soon</li>
-        <li><strong>Abstract Submission Deadline:</strong> Coming Soon</li>
-        <li><strong>Notification of Acceptance:</strong> Coming Soon</li>
-        <li><strong>Early Registration Deadline:</strong> Coming Soon</li>
-        <li><strong>Conference Dates:</strong> 2027</li>
+      <ul style="list-style: none; line-height: 2.2; padding: 0;">
+        <li style="border-bottom: 1px solid var(--border-light); padding: 6px 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <strong>Abstract Submission Opens:</strong> <span style="color: var(--sunset-gold);">Coming Soon</span>
+        </li>
+        <li style="border-bottom: 1px solid var(--border-light); padding: 6px 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <strong>Abstract Submission Deadline:</strong> <span style="color: var(--sunset-gold);">Coming Soon</span>
+        </li>
+        <li style="border-bottom: 1px solid var(--border-light); padding: 6px 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <strong>Notification of Acceptance:</strong> <span style="color: var(--sunset-gold);">Coming Soon</span>
+        </li>
+        <li style="border-bottom: 1px solid var(--border-light); padding: 6px 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <strong>Early Registration Deadline:</strong> <span style="color: var(--sunset-gold);">Coming Soon</span>
+        </li>
+        <li style="padding: 6px 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <strong>Conference Dates:</strong> <span style="color: var(--ocean-cyan); font-weight: bold;">2027</span>
+        </li>
       </ul>
     </section>
   </main>
 
+  <!-- Modal Component -->
   <div class="modal" id="comingSoonModal" aria-hidden="true">
     <div class="modal-box">
       <button class="modal-close" id="modalClose">&times;</button>
       <h2>ICAMS 2027</h2>
       <p>Online Portal & Registration Opening Soon.</p>
-      <button class="btn" id="modalButton">Close</button>
+      <button class="btn btn-primary" id="modalButton">Close</button>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+    <p><strong>ICAMS 2027</strong> — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
     <p><small>&copy; 2027 ICAMS. Mazatlán, Sinaloa, Mexico. All Rights Reserved.</small></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
