@@ -1,6 +1,5 @@
 /* ==========================================================================
-   ICAMS 2027 - Academic Theme + Mazatlán Pacific Accents
-   Palette: Dark Ocean, Pacific Cyan, Sunset Gold & Slate
+   ICAMS 2027 - Academic Theme + Pacific Accents
    ========================================================================== */
 
 :root {
@@ -13,7 +12,6 @@
   --text-muted: #94a3b8;
   --text-dim: #64748b;
   
-  /* Mazatlán Theme Colors */
   --ocean-blue: #0284c7;
   --ocean-cyan: #38bdf8;
   --sunset-gold: #f59e0b;
@@ -47,9 +45,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   Header & Dynamic Logo
-   ========================================================================== */
+/* Header & Logo */
 .site-header {
   position: sticky;
   top: 0;
@@ -83,7 +79,7 @@ body {
   letter-spacing: 0.5px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .brand-text span {
@@ -93,14 +89,14 @@ body {
 }
 
 .site-logo-svg {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.4));
   transition: var(--transition);
 }
 
 .brand:hover .site-logo-svg {
-  transform: rotate(15deg) scale(1.05);
+  transform: rotate(30deg) scale(1.08);
 }
 
 .main-nav {
@@ -139,9 +135,7 @@ body {
   cursor: pointer;
 }
 
-/* ==========================================================================
-   Hero Section with Pacific Wave Visuals
-   ========================================================================== */
+/* Hero Section */
 .hero-banner {
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(7, 12, 20, 0.95) 100%),
               radial-gradient(ellipse at top, rgba(2, 132, 199, 0.3), transparent 70%);
@@ -153,13 +147,13 @@ body {
 
 .hero-art-container {
   margin: 0 auto 20px auto;
-  max-width: 140px;
+  max-width: 100px;
 }
 
 .hero-graphic {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.35));
 }
 
 .badge-hybrid {
@@ -222,7 +216,6 @@ body {
   gap: 6px;
 }
 
-/* Coastal Wave Transition SVG Overlay */
 .hero-wave-divider {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -232,9 +225,7 @@ body {
   pointer-events: none;
 }
 
-/* ==========================================================================
-   Buttons & Action Elements
-   ========================================================================== */
+/* Buttons */
 .cta-group {
   display: flex;
   gap: 16px;
@@ -280,9 +271,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   Highlights Bar & Cards
-   ========================================================================== */
+/* Highlights Bar */
 .highlights-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -322,9 +311,7 @@ body {
   margin-top: 4px;
 }
 
-/* ==========================================================================
-   Content Cards with Coastal Tone
-   ========================================================================== */
+/* Content Cards & Containers */
 .page-container {
   max-width: 1240px;
   margin: 20px auto 60px auto;
@@ -367,7 +354,6 @@ body {
   border-radius: 2px;
 }
 
-/* Special Mazatlán Callout Card */
 .mazatlan-feature-card {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(2, 132, 199, 0.15));
   border: 1px solid var(--border-glow);
@@ -393,97 +379,6 @@ body {
   max-width: 800px;
 }
 
-/* ==========================================================================
-   Modal & Footer
-   ========================================================================== */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(3, 7, 18, 0.85);
-  backdrop-filter: blur(8px);
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.modal.active {
-  display: flex;
-  opacity: 1;
-}
-
-.modal-box {
-  background: #0f172a;
-  border: 1px solid var(--border-glow);
-  padding: 35px;
-  border-radius: 16px;
-  max-width: 440px;
-  width: 90%;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-}
-
-.modal-box h2 {
-  color: var(--text-main);
-  font-size: 1.5rem;
-  margin-bottom: 12px;
-}
-
-.modal-box p {
-  color: var(--text-muted);
-  margin-bottom: 25px;
-}
-
-.modal-close {
-  position: absolute;
-  top: 15px; right: 20px;
-  background: none;
-  border: none;
-  color: var(--text-muted);
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-footer {
-  background: #040810;
-  text-align: center;
-  padding: 40px 20px;
-  color: var(--text-dim);
-  border-top: 1px solid var(--border-light);
-  margin-top: 60px;
-  font-size: 0.92rem;
-}
-
-footer strong {
-  color: var(--text-muted);
-}
-
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-@media (max-width: 992px) {
-  .menu-toggle { display: block; }
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%; left: 0; right: 0;
-    background: rgba(15, 23, 42, 0.98);
-    backdrop-filter: blur(16px);
-    padding: 20px;
-    border-bottom: 1px solid var(--glass-border);
-    gap: 8px;
-  }
-  .main-nav.open { display: flex; }
-}
 /* ==========================================================================
    Interactive Scientific Topics Layout (Hover Reveal)
    ========================================================================== */
@@ -558,7 +453,6 @@ footer strong {
   opacity: 0;
 }
 
-/* Ocultar descripción por defecto y desplegar suavemente al hacer hover */
 .topic-desc {
   max-height: 0;
   opacity: 0;
@@ -574,4 +468,94 @@ footer strong {
   max-height: 120px;
   opacity: 1;
   margin-top: 10px;
+}
+
+/* Modal & Footer */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-box {
+  background: #0f172a;
+  border: 1px solid var(--border-glow);
+  padding: 35px;
+  border-radius: 16px;
+  max-width: 440px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.modal-box h2 {
+  color: var(--text-main);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.modal-box p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px; right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+footer {
+  background: #040810;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-light);
+  margin-top: 60px;
+  font-size: 0.92rem;
+}
+
+footer strong {
+  color: var(--text-muted);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 992px) {
+  .menu-toggle { display: block; }
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(16px);
+    padding: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    gap: 8px;
+  }
+  .main-nav.open { display: flex; }
 }
