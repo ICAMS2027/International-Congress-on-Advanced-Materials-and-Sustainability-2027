@@ -484,3 +484,94 @@ footer strong {
   }
   .main-nav.open { display: flex; }
 }
+/* ==========================================================================
+   Interactive Scientific Topics Layout (Hover Reveal)
+   ========================================================================== */
+.topics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.topic-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--ocean-cyan);
+  border-radius: 10px;
+  padding: 16px 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.topic-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  border-left-color: var(--sunset-gold);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.topic-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topic-number {
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--ocean-cyan);
+  font-weight: 800;
+  font-size: 0.9rem;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.topic-card:hover .topic-number {
+  background: var(--sunset-gold);
+  color: #000;
+}
+
+.topic-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  margin: 0;
+  flex: 1;
+}
+
+.topic-hint {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.topic-card:hover .topic-hint {
+  opacity: 0;
+}
+
+/* Ocultar descripción por defecto y desplegar suavemente al hacer hover */
+.topic-desc {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  line-height: 1.5;
+  padding-left: 46px;
+}
+
+.topic-card:hover .topic-desc {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 10px;
+}
