@@ -3,15 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topics | ICAMS 2027</title>
+  <title>ICAMS 2027 | Scientific Topics</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Sticky Header -->
   <header class="site-header">
     <div class="container-navigation">
-      <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
+      <a href="index.html" class="brand">
+        <svg class="site-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+          <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+          <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
+        </svg>
+        <span class="brand-text">ICAMS <span>2027</span></span>
+      </a>
+
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">HOME</a>
         <a href="ABOUT.html" class="nav-link">ABOUT</a>
@@ -30,72 +48,152 @@
 
   <main class="page-container">
     <section class="content-card">
-      <h1>Scientific Topics</h1>
-    </section>
+      <h2>Scientific Topics</h2>
+      <p style="color: var(--text-dim); margin-bottom: 25px;">Hover over any topic below to reveal detailed subfields and research focus areas.</p>
 
-    <div class="grid-container">
-      <div class="grid-card">
-        <h3>1. Semiconductor Materials and Devices</h3>
-        <p>Semiconductor synthesis, processing, doping, defects, heterostructures, electrical properties, semiconductor physics, and device applications.</p>
+      <div class="topics-container">
+        
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">1</span>
+            <h3 class="topic-title">Semiconductor Materials and Devices</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Semiconductor synthesis, processing, doping, defects, heterostructures, electrical properties, semiconductor physics, and device applications.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">2</span>
+            <h3 class="topic-title">Electronic and Optoelectronic Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Electronic materials, optoelectronic materials, optical and electrical properties, LEDs, photodetectors, sensors, and related devices.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">3</span>
+            <h3 class="topic-title">Nanomaterials and Low-Dimensional Structures</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Nanoparticles, nanowires, nanotubes, quantum dots, thin films, two-dimensional materials, and nanostructured systems.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">4</span>
+            <h3 class="topic-title">Advanced Functional Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Dielectric, ferroelectric, piezoelectric, magnetic, multifunctional, and smart materials.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">5</span>
+            <h3 class="topic-title">Materials for Energy Conversion and Storage</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Solar cells, batteries, supercapacitors, fuel cells, energy harvesting, hydrogen technologies, and advanced materials for energy applications.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">6</span>
+            <h3 class="topic-title">Photocatalytic and Photoactive Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Semiconductor photocatalysts, heterojunctions, photoelectrochemistry, solar-driven processes, pollutant degradation, and environmental remediation.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">7</span>
+            <h3 class="topic-title">Sustainable and Green Materials Processing</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Green synthesis, bio-assisted synthesis, sustainable precursors, low-energy processing, waste-derived materials, circular materials, and environmentally responsible fabrication.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">8</span>
+            <h3 class="topic-title">Thin Films, Coatings and Interfaces</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Thin-film deposition, functional coatings, surface engineering, interfaces, contacts, surface modification, and related characterization.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">9</span>
+            <h3 class="topic-title">Polymers, Hybrid and Composite Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Conducting polymers, organic semiconductors, polymer composites, hybrid materials, and multifunctional composites.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">10</span>
+            <h3 class="topic-title">Optical, Photonic and Laser Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Optical materials, photonic materials, nonlinear optical materials, luminescent materials, crystals, glasses, and laser materials.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">11</span>
+            <h3 class="topic-title">Thermoelectric, Ionic and Emerging Materials</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Thermoelectric materials, solid-state ionic materials, novel functional materials, and emerging materials technologies.
+          </div>
+        </div>
+
+        <div class="topic-card">
+          <div class="topic-header">
+            <span class="topic-number">12</span>
+            <h3 class="topic-title">Materials Characterization & Structure–Property Relationships</h3>
+            <span class="topic-hint">Hover to expand</span>
+          </div>
+          <div class="topic-desc">
+            Structural, morphological, optical, electrical, dielectric, magnetic, thermal, and surface characterization, including advanced microscopy, diffraction, and spectroscopy.
+          </div>
+        </div>
+
       </div>
-      <div class="grid-card">
-        <h3>2. Electronic and Optoelectronic Materials</h3>
-        <p>Electronic materials, optoelectronic materials, optical and electrical properties, LEDs, photodetectors, sensors, and related devices.</p>
-      </div>
-      <div class="grid-card">
-        <h3>3. Nanomaterials and Low-Dimensional Structures</h3>
-        <p>Nanoparticles, nanowires, nanotubes, quantum dots, thin films, two-dimensional materials, and nanostructured systems.</p>
-      </div>
-      <div class="grid-card">
-        <h3>4. Advanced Functional Materials</h3>
-        <p>Dielectric, ferroelectric, piezoelectric, magnetic, multifunctional, and smart materials.</p>
-      </div>
-      <div class="grid-card">
-        <h3>5. Materials for Energy Conversion and Storage</h3>
-        <p>Solar cells, batteries, supercapacitors, fuel cells, energy harvesting, hydrogen technologies, and advanced materials for energy applications.</p>
-      </div>
-      <div class="grid-card">
-        <h3>6. Photocatalytic and Photoactive Materials</h3>
-        <p>Semiconductor photocatalysts, heterojunctions, photoelectrochemistry, solar-driven processes, pollutant degradation, and environmental remediation.</p>
-      </div>
-      <div class="grid-card">
-        <h3>7. Sustainable and Green Materials Processing</h3>
-        <p>Green synthesis, bio-assisted synthesis, sustainable precursors, low-energy processing, waste-derived materials, circular materials, and environmentally responsible fabrication.</p>
-      </div>
-      <div class="grid-card">
-        <h3>8. Thin Films, Coatings and Interfaces</h3>
-        <p>Thin-film deposition, functional coatings, surface engineering, interfaces, contacts, surface modification, and related characterization.</p>
-      </div>
-      <div class="grid-card">
-        <h3>9. Polymers, Hybrid and Composite Materials</h3>
-        <p>Conducting polymers, organic semiconductors, polymer composites, hybrid materials, and multifunctional composites.</p>
-      </div>
-      <div class="grid-card">
-        <h3>10. Optical, Photonic and Laser Materials</h3>
-        <p>Optical materials, photonic materials, nonlinear optical materials, luminescent materials, crystals, glasses, and laser materials.</p>
-      </div>
-      <div class="grid-card">
-        <h3>11. Thermoelectric, Ionic and Emerging Materials</h3>
-        <p>Thermoelectric materials, solid-state ionic materials, novel functional materials, and emerging materials technologies.</p>
-      </div>
-      <div class="grid-card">
-        <h3>12. Materials Characterization & Structure–Property Relationships</h3>
-        <p>Structural, morphological, optical, electrical, dielectric, magnetic, thermal, and surface characterization, including advanced microscopy, diffraction, and spectroscopy techniques.</p>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <div class="modal" id="comingSoonModal" aria-hidden="true">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <h2>ICAMS 2027</h2>
-      <button class="btn" id="modalButton">Close</button>
-    </div>
-  </div>
-
   <footer>
-    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+    <p><strong>ICAMS 2027</strong> — International Congress on Advanced Materials and Sustainability</p>
+    <p><small>&copy; 2027 ICAMS. Mazatlán, Mexico. All Rights Reserved.</small></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
