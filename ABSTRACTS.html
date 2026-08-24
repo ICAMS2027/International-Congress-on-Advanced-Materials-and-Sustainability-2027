@@ -3,15 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abstracts | ICAMS 2027</title>
-  <link rel="stylesheet" href="style.css">
+  <title>ICAMS 2027 | Abstracts Submission & Template</title>
+  <link rel="stylesheet" href="style.css?v=4">
+  <style>
+    /* Estilos del contenedor del Abstract Template */
+    .template-box {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      margin: 25px 0;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Membrete Integrado */
+    .template-header {
+      background-color: #070c14;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px 20px 20px;
+      border-bottom: 3px solid #38bdf8;
+    }
+    .template-header .badge {
+      display: inline-block;
+      border: 1px solid #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      color: #f59e0b;
+      border-radius: 15px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin: 8px 0;
+      text-transform: uppercase;
+    }
+    .template-header h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin: 4px 0;
+      color: #ffffff;
+    }
+    .template-header h2 {
+      font-size: 1rem;
+      color: #38bdf8;
+      margin: 0 0 4px 0;
+    }
+    .template-header p {
+      font-size: 0.85rem;
+      color: #f8fafc;
+      margin: 0 0 10px 0;
+      font-weight: 600;
+    }
+    .template-header .meta {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 8px;
+    }
+
+    /* Cuerpo de la plantilla del Abstract */
+    .template-body {
+      padding: 30px 35px;
+      line-height: 1.5;
+    }
+    .doc-title {
+      font-family: Arial, sans-serif;
+      font-size: 14pt;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 12pt;
+    }
+    .doc-author {
+      font-family: Arial, sans-serif;
+      font-size: 13pt;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 8pt;
+    }
+    .doc-affiliation {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-weight: normal;
+      color: #333333;
+      margin-bottom: 4pt;
+    }
+    .doc-email {
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+      font-style: italic;
+      color: #333333;
+      margin-bottom: 18pt;
+    }
+    .doc-abstract {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      color: #111111;
+      text-align: justify;
+      margin-bottom: 18pt;
+      background-color: #f8fafc;
+      padding: 15px;
+      border-left: 3px solid #38bdf8;
+    }
+    .doc-keywords {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      color: #111111;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- Sticky Header -->
   <header class="site-header">
     <div class="container-navigation">
-      <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
+      <a href="index.html" class="brand">
+        <svg class="site-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+          <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+          <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
+        </svg>
+        <span class="brand-text">ICAMS <span>2027</span></span>
+      </a>
+
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      
       <nav class="main-nav" id="mainNav">
         <a href="index.html" class="nav-link">HOME</a>
         <a href="ABOUT.html" class="nav-link">ABOUT</a>
@@ -29,66 +154,82 @@
   </header>
 
   <main class="page-container">
+    
+    <!-- Abstract Submission & Guidelines Card -->
     <section class="content-card">
-      <h1>Abstract Submission</h1>
-      <p>Researchers, academics, professionals, and students are invited to submit abstracts presenting original research related to the scientific topics of ICAMS 2027.</p>
-      <p>Abstracts should clearly describe:</p>
-      <p style="text-align: center; font-weight: bold; color: var(--accent); margin: 20px 0;">
-        Material/System &rarr; Synthesis or Preparation &rarr; Characterization &rarr; Main Results &rarr; Properties &rarr; Potential Application
+      <h2>Abstract Submission & Template</h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px;">
+        All authors are requested to prepare their abstract according to the official formatting guidelines shown below.
       </p>
+
+      <!-- VISTA PREVIA DEL ABSTRACT TEMPLATE -->
+      <div class="template-box">
+        <!-- Membrete -->
+        <div class="template-header">
+          <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+            <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+            <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+            <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+            <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+            <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+            <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+            <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+            <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+            <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+            <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
+          </svg>
+          <div class="badge">🌐 HYBRID CONFERENCE — ON-SITE & ONLINE</div>
+          <h1>ICAMS 2027</h1>
+          <h2>International Congress on Advanced Materials and Sustainability</h2>
+          <p>Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+          <div class="meta">March 17–20, 2027 &bull; Gaviana Resort Mazatlán, Mexico</div>
+        </div>
+
+        <!-- Document Content Template -->
+        <div class="template-body">
+          <div class="doc-title">Title (Arial; font size:14; Bold)</div>
+          <div class="doc-author">Author………….etc. (Arial; font size:13; Bold)</div>
+          <div class="doc-affiliation"><sup>1</sup>Affiliation (Arial; font size:10)</div>
+          <div class="doc-email">*Corresponding author’s email address: icams@gmail.com</div>
+          <div class="doc-abstract">
+            <strong>Abstract body text</strong> (Arial ; font size:12; word limit: 180)
+          </div>
+          <div class="doc-keywords">
+            <strong>Keywords:</strong> Keyword 1 (Arial; font size:12); Keyword 2; ………… Keyword 4.
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTONES Y ACCIONES -->
+      <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px;">
+        <a href="mailto:icams2027@gmail.com" class="btn btn-accent">Submit Abstract via Email</a>
+      </div>
     </section>
 
-    <section class="content-card">
-      <h2>Presentation Categories</h2>
-      <ul>
-        <li>Oral Presentation — On-site</li>
-        <li>Oral Presentation — Online</li>
-        <li>Poster Presentation — On-site</li>
-      </ul>
-    </section>
-
-    <section class="content-card">
-      <h2>Abstract Guidelines</h2>
-      <p>Abstracts must be submitted in English. Each abstract should include:</p>
-      <ul style="line-height: 1.8;">
-        <li>Title</li>
-        <li>Authors & Affiliations</li>
-        <li>Corresponding Author</li>
-        <li>Abstract Body</li>
-        <li>Keywords</li>
-        <li>Selected Scientific Topic</li>
-        <li>Preferred Presentation Format</li>
-      </ul>
-    </section>
-
-    <section class="content-card">
-      <h2>Important Dates</h2>
-      <ul style="list-style: none; padding: 0; line-height: 2;">
-        <li><strong>Abstract Submission Opens:</strong> Coming Soon</li>
-        <li><strong>Abstract Submission Deadline:</strong> Coming Soon</li>
-        <li><strong>Notification of Acceptance:</strong> Coming Soon</li>
-        <li><strong>Early Registration Deadline:</strong> Coming Soon</li>
-      </ul>
-    </section>
-
-    <section class="content-card" style="text-align: center; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-      <button class="btn future-action">DOWNLOAD ABSTRACT TEMPLATE</button>
-      <button class="btn future-action" style="background: var(--primary-hover);">SUBMIT ABSTRACT</button>
-    </section>
   </main>
 
-  <div class="modal" id="comingSoonModal" aria-hidden="true">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <h2>Submission Portal</h2>
-      <p>Abstract submission portal and template downloads will open soon.</p>
-      <button class="btn" id="modalButton">Close</button>
-    </div>
-  </div>
-
   <footer>
-    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+    <div class="footer-logo">
+      <svg class="site-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+        <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+        <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+        <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+        <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+        <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+        <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+        <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
+      </svg>
+      <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">ICAMS 2027</span>
+    </div>
+    <p><strong>International Congress on Advanced Materials and Sustainability</strong></p>
+    <p><small>&copy; 2027 ICAMS. Gaviana Resort Mazatlán, Mexico. Contact: icams2027@gmail.com</small></p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
