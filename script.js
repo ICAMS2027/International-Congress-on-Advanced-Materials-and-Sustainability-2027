@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("comingSoonModal");
   const modalClose = document.getElementById("modalClose");
   const modalButton = document.getElementById("modalButton");
-  const futureLinks = document.querySelectorAll(".future-link");
   const futureActions = document.querySelectorAll(".future-action");
   const navLinks = document.querySelectorAll(".nav-link");
 
-  // Transición del Header al hacer Scroll
+  // Header Scroll Effect
   function updateHeader() {
     if (header) {
-      if (window.scrollY > 30) header.classList.add("scrolled");
+      if (window.scrollY > 20) header.classList.add("scrolled");
       else header.classList.remove("scrolled");
     }
   }
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateHeader, { passive: true });
   updateHeader();
 
-  // Control del Menú Hamburguesa
+  // Mobile Menu Drawer
   function toggleMobileMenu() {
     if (!mainNav || !menuToggle) return;
     const isOpen = mainNav.classList.toggle("open");
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  futureLinks.forEach((link) => link.addEventListener("click", openModal));
   futureActions.forEach((btn) => btn.addEventListener("click", openModal));
 
   if (modalClose) modalClose.addEventListener("click", closeModal);
