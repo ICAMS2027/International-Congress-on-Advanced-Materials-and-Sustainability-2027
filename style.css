@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Root Variables & Base Reset
+   ========================================================================== */
 :root {
   --bg-dark: #070c14;
   --bg-card: #0f172a;
@@ -10,7 +13,7 @@
   --border-light: rgba(255, 255, 255, 0.1);
   --border-glow: rgba(56, 189, 248, 0.3);
 }
- 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +27,9 @@ body {
   line-height: 1.6;
 }
 
-/* Header & Navigation */
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -98,11 +103,12 @@ body {
   cursor: pointer;
 }
 
-/* Hero Banner */
+/* ==========================================================================
+   Hero Banner & Background Carousel
+   ========================================================================== */
 .hero-banner {
   position: relative;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(7, 12, 20, 0.95) 100%),
-              radial-gradient(ellipse at top, rgba(2, 132, 199, 0.35), transparent 70%);
+  overflow: hidden;
   text-align: center;
   padding: 80px 20px 60px 20px;
   min-height: 480px;
@@ -110,6 +116,44 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero-bg-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Transición suave de fundido cruzado */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Slide 1: Gradiente azul original */
+.hero-slide:nth-child(1) {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.7) 0%, rgba(7, 12, 20, 0.95) 100%),
+              radial-gradient(ellipse at top, rgba(2, 132, 199, 0.35), transparent 70%);
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 12, 20, 0.4) 0%, rgba(7, 12, 20, 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-banner > *:not(.hero-bg-slides):not(.hero-overlay) {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-art-container {
@@ -179,7 +223,9 @@ body {
   flex-wrap: wrap;
 }
 
-/* Buttons */
+/* ==========================================================================
+   Buttons & UI Elements
+   ========================================================================== */
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -214,7 +260,9 @@ body {
   box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
 }
 
-/* Highlights Bar & Layout */
+/* ==========================================================================
+   Highlights Bar & Cards
+   ========================================================================== */
 .highlights-bar {
   max-width: 1100px;
   margin: -30px auto 40px auto;
@@ -297,7 +345,9 @@ body {
   color: var(--text-muted);
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
   border-top: 1px solid var(--border-light);
   background: #030712;
@@ -319,7 +369,9 @@ footer p {
   margin-bottom: 8px;
 }
 
-/* Responsive */
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
