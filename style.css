@@ -10,7 +10,7 @@
   --border-light: rgba(255, 255, 255, 0.1);
   --border-glow: rgba(56, 189, 248, 0.3);
 }
-
+ 
 * {
   box-sizing: border-box;
   margin: 0;
