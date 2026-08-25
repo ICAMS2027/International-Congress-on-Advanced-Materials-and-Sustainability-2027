@@ -4,62 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | ICAMS 2027</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="container nav-container">
-    <a href="index.html" class="logo">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d2ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="12 2 2 7 2 17 12 22 22 17 22 7 12 2"></polygon>
-        <line x1="12" y1="22" x2="12" y2="12"></line>
-        <polyline points="22 7 12 12 2 7"></polyline>
-      </svg>
-      <span class="logo-text">ICAMS <span class="accent">2027</span></span>
-    </a>
-    <nav class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="ABOUT.html">ABOUT</a>
-      <a href="TOPICS.html">TOPICS</a>
-      <a href="SPEAKERS.html">SPEAKERS</a>
-      <a href="PROGRAM.html">PROGRAM</a>
-      <a href="ABSTRACTS.html">ABSTRACTS</a>
-      <a href="REGISTRATION.html">REGISTRATION</a>
-      <a href="PUBLICATIONS.html">PUBLICATIONS</a>
-      <a href="VENUE.html">VENUE</a>
-      <a href="COMMITTEE.html">COMMITTEE</a>
-      <a href="CONTACT.html">CONTACT</a>
-    </nav>
-  </div>
-</header>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="url(#sun-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs>
+            <linearGradient id="sun-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff6b4a"/>
+              <stop offset="100%" stop-color="#f8961e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="logo-text">ICAMS <span class="accent">2027</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="ABOUT.html">ABOUT</a>
+        <a href="TOPICS.html">TOPICS</a>
+        <a href="SPEAKERS.html">SPEAKERS</a>
+        <a href="PROGRAM.html">PROGRAM</a>
+        <a href="ABSTRACTS.html">ABSTRACTS</a>
+        <a href="REGISTRATION.html">REGISTRATION</a>
+        <a href="PUBLICATIONS.html" class="active">PUBLICATIONS</a>
+        <a href="VENUE.html">VENUE</a>
+        <a href="COMMITTEE.html">COMMITTEE</a>
+        <a href="CONTACT.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
 
-  <main class="page-container">
-    <section class="content-card">
-      <h1>Publication Opportunities</h1>
-      <p>ICAMS 2027 is exploring publication opportunities with international peer-reviewed journals in materials science and related fields.</p>
-      <p>Selected high-quality contributions presented at ICAMS 2027 may be invited for submission to associated Special Issues or Topical Collections.</p>
+  <main class="container main-content">
+    <section class="card">
+      <h1 class="section-title">Publication Opportunities</h1>
+      <p style="margin-bottom: 12px;">ICAMS 2027 is exploring publication opportunities with international peer-reviewed journals in materials science and related fields. Selected high-quality contributions presented at ICAMS 2027 may be invited for submission to associated Special Issues or Topical Collections.</p>
       <p>All manuscripts will be subject to the standard editorial procedures and independent peer-review process of the corresponding journal.</p>
     </section>
 
-    <section class="content-card">
-      <h2>Special Issue / Topical Collection</h2>
-      <p style="color: var(--accent); font-weight: bold; font-size: 1.1rem;">Under Discussion</p>
-      <p style="margin-top: 15px;">Further information regarding participating journals, submission guidelines, deadlines, and publication opportunities will be announced after formal confirmation.</p>
+    <section class="card">
+      <h2 class="section-title">Special Issue / Topical Collection</h2>
+      <h3 style="color: var(--gold-warm); margin-top: 15px; margin-bottom: 8px;">Under Discussion</h3>
+      <p style="color: var(--text-muted);">Further information regarding participating journals, submission guidelines, deadlines, and publication opportunities will be announced after formal confirmation.</p>
     </section>
   </main>
 
-  <div class="modal" id="comingSoonModal" aria-hidden="true">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <h2>ICAMS 2027</h2>
-      <button class="btn" id="modalButton">Close</button>
+  <footer class="footer">
+    <div class="container">
+      <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future | Mazatlán, Mexico</p>
     </div>
-  </div>
-
-  <footer>
-    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
