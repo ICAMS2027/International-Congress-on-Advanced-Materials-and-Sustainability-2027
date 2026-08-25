@@ -1,85 +1,76 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ICAMS 2027 - Ponentes</title>
+  <title>Speakers | ICAMS 2027</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- BARRA DE NAVEGACIÓN Y LOGO -->
   <header class="site-header">
-    <nav class="navbar">
-      <div class="container navbar-container">
-        
-        <a href="index.html" class="navbar-brand">
-          <img src="images/logo.png" alt="ICAMS 2027 Logo" class="logo-img">
-          <span class="brand-text">ICAMS 2027</span>
-        </a>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">&#9776;</button>
-
-        <div class="nav-menu" id="navMenu">
-          <div class="nav-menu-header">
-            <span class="nav-menu-title">ICAMS 2027</span>
-            <button class="nav-close" id="navClose" aria-label="Cerrar menú">&times;</button>
-          </div>
-
-          <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">Acerca de</a></li>
-            <li class="nav-item"><a href="speakers.html" class="nav-link active">Ponentes</a></li>
-            <li class="nav-item"><a href="program.html" class="nav-link">Programa</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contacto</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
+    <div class="container-navigation">
+      <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="ABOUT.html" class="nav-link">ABOUT</a>
+        <a href="TOPICS.html" class="nav-link">TOPICS</a>
+        <a href="SPEAKERS.html" class="nav-link active">SPEAKERS</a>
+        <a href="PROGRAM.html" class="nav-link">PROGRAM</a>
+        <a href="ABSTRACTS.html" class="nav-link">ABSTRACTS</a>
+        <a href="REGISTRATION.html" class="nav-link">REGISTRATION</a>
+        <a href="PUBLICATIONS.html" class="nav-link">PUBLICATIONS</a>
+        <a href="VENUE.html" class="nav-link">VENUE</a>
+        <a href="COMMITTEE.html" class="nav-link">COMMITTEE</a>
+        <a href="CONTACT.html" class="nav-link">CONTACT</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- SECCIÓN DE PONENTES CON HOVER OCULTO QUE SOLO APARECE AL PASAR EL CURSOR -->
-  <main class="container">
-    <h1>Ponentes Invitados</h1>
+  <main class="page-container">
+    <section class="content-card">
+      <h1>Plenary Speakers</h1>
+      <p>Internationally recognized researchers will present plenary lectures highlighting major advances and emerging directions in materials science and technology.</p>
+      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Plenary Speakers — Coming Soon</p>
+    </section>
 
-    <div class="speakers-grid">
-      
-      <!-- Tarjeta 1 -->
-      <div class="hover-card">
-        <img src="images/speaker1.jpg" alt="Ponente 1" class="card-img">
-        <div class="hover-content">
-          <h3>Dr. Nombre del Ponente</h3>
-          <p>Especialista en Nanotecnología y Síntesis Verde de Nanopartículas.</p>
-        </div>
-      </div>
+    <section class="content-card">
+      <h1>Keynote Speakers</h1>
+      <p>Leading researchers will present keynote lectures focused on recent advances in specialized areas of advanced materials.</p>
+      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Keynote Speakers — Coming Soon</p>
+    </section>
 
-      <!-- Tarjeta 2 -->
-      <div class="hover-card">
-        <img src="images/speaker2.jpg" alt="Ponente 2" class="card-img">
-        <div class="hover-content">
-          <h3>Dra. Nombre de la Ponente</h3>
-          <p>Investigadora en Fotocatálisis y Degradación de Contaminantes.</p>
-        </div>
-      </div>
+    <section class="content-card">
+      <h1>Invited Speakers</h1>
+      <p>Invited experts will present current research developments within the scientific topics of ICAMS 2027.</p>
+      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Invited Speakers — Coming Soon</p>
+    </section>
 
-    </div>
+    <section class="content-card" style="border-style: dashed;">
+      <h2>Speaker Information Directory</h2>
+      <p>Confirmed profiles will feature:</p>
+      <ul>
+        <li>Name</li>
+        <li>Institution & Country</li>
+        <li>Research Area</li>
+        <li>Lecture Title</li>
+        <li>Biography</li>
+      </ul>
+    </section>
   </main>
 
-  <!-- SCRIPT PARA MENÚ MÓVIL -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.getElementById('navToggle');
-      const navClose = document.getElementById('navClose');
-      const navMenu = document.getElementById('navMenu');
+  <div class="modal" id="comingSoonModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2>ICAMS 2027</h2>
+      <button class="btn" id="modalButton">Close</button>
+    </div>
+  </div>
 
-      if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => navMenu.classList.add('open'));
-      }
-      if (navClose && navMenu) {
-        navClose.addEventListener('click', () => navMenu.classList.remove('open'));
-      }
-    });
-  </script>
+  <footer>
+    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
