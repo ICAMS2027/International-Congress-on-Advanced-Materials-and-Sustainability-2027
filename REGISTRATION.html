@@ -3,58 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration | ICAMS 2027</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>ICAMS 2027 | Registration</title>
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="#ff6b4a" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container-navigation">
+      <a href="index.html" class="brand">
+        <svg class="site-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+          <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+          <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+          <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+          <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+          <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
         </svg>
-        <span>ICAMS <span class="accent">2027</span></span>
+        <span class="brand-text">ICAMS <span>2027</span></span>
       </a>
-      <nav class="nav-links">
-        <a href="index.html">HOME</a>
-        <a href="ABOUT.html">ABOUT</a>
-        <a href="TOPICS.html">TOPICS</a>
-        <a href="SPEAKERS.html">SPEAKERS</a>
-        <a href="PROGRAM.html">PROGRAM</a>
-        <a href="ABSTRACTS.html">ABSTRACTS</a>
-        <a href="REGISTRATION.html" class="active">REGISTRATION</a>
-        <a href="PUBLICATIONS.html">PUBLICATIONS</a>
-        <a href="VENUE.html">VENUE</a>
-        <a href="COMMITTEE.html">COMMITTEE</a>
-        <a href="CONTACT.html">CONTACT</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="nav-link">HOME</a>
+        <a href="ABOUT.html" class="nav-link">ABOUT</a>
+        <a href="TOPICS.html" class="nav-link">TOPICS</a>
+        <a href="SPEAKERS.html" class="nav-link">SPEAKERS</a>
+        <a href="PROGRAM.html" class="nav-link">PROGRAM</a>
+        <a href="ABSTRACTS.html" class="nav-link">ABSTRACTS</a>
+        <a href="REGISTRATION.html" class="nav-link active">REGISTRATION</a>
+        <a href="PUBLICATIONS.html" class="nav-link">PUBLICATIONS</a>
+        <a href="VENUE.html" class="nav-link">VENUE</a>
+        <a href="COMMITTEE.html" class="nav-link">COMMITTEE</a>
+        <a href="CONTACT.html" class="nav-link">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <main class="container main-content">
-    <section class="card">
-      <h1 class="section-title">Registration Information</h1>
-      <p class="subtitle">Registration details and fee structures for both on-site and online attendees will be released shortly.</p>
-      <div style="text-align: center; margin-top: 20px;">
-        <a href="ABSTRACTS.html" class="btn btn-primary">Go to Submission & Registration Portal</a>
+  <main class="page-container">
+    
+    <!-- Registration Fees Card -->
+    <section class="content-card">
+      <h2>Registration Fees & Categories</h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 25px;">
+        Registration is officially open for both On-site and Online attendees. Please review the fee categories below:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 30px;">
+        <div style="background: rgba(15, 23, 42, 0.6); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light); border-left: 5px solid var(--ocean-cyan);">
+          <h3 style="color: var(--ocean-cyan); font-size: 1.25rem; margin-top: 0; margin-bottom: 10px;">Researchers & Academics</h3>
+          <p style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin: 0 0 5px 0;">$1,000 MXN</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">(~ $58 USD) &bull; Applicable for On-site or Online</p>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.6); padding: 25px; border-radius: 12px; border: 1px solid var(--border-light); border-left: 5px solid var(--sunset-gold);">
+          <h3 style="color: var(--sunset-gold); font-size: 1.25rem; margin-top: 0; margin-bottom: 10px;">Students (B.S., M.S., Ph.D.)</h3>
+          <p style="font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin: 0 0 5px 0;">$500 MXN</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0;">(~ $29 USD) &bull; Valid student ID required</p>
+        </div>
       </div>
     </section>
+
+    <!-- Included Services -->
+    <section class="content-card">
+      <h2>Registration Includes</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        <div>
+          <h3 style="color: var(--ocean-cyan); font-size: 1.1rem; margin-bottom: 12px;">On-site Participants:</h3>
+          <ul style="line-height: 1.8; color: var(--text-main); padding-left: 20px;">
+            <li>Access to all scientific sessions & keynotes</li>
+            <li>Printed / Digital conference materials & badge</li>
+            <li>Certificate of participation / presentation</li>
+            <li>Coffee breaks throughout the conference</li>
+            <li>Access to networking activities</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="color: var(--sunset-gold); font-size: 1.1rem; margin-bottom: 12px;">Online Participants:</h3>
+          <ul style="line-height: 1.8; color: var(--text-main); padding-left: 20px;">
+            <li>Online access to live scientific sessions</li>
+            <li>Digital conference materials & program book</li>
+            <li>Electronic certificate of participation / presentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Action Button Unificado -->
+      <div style="text-align: center; margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--border-light);">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVVvmiW8A7UmSR1s5JW_VixPX1iA98CUI-t64AlSpNuzNknw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-accent" style="font-size: 1.1rem; padding: 14px 32px;">
+          📝 Submit Abstract & Register
+        </a>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future | Mazatlán, Mexico</p>
+  <footer>
+    <div class="footer-logo">
+      <svg class="site-logo-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4 L34 12 L34 28 L20 36 L6 28 L6 12 Z" stroke="#38bdf8" stroke-width="2" fill="rgba(56, 189, 248, 0.04)"/>
+        <line x1="20" y1="4" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <line x1="34" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <line x1="6" y1="28" x2="20" y2="20" stroke="rgba(56, 189, 248, 0.4)" stroke-width="1.2"/>
+        <circle cx="20" cy="4" r="2.5" fill="#f59e0b"/>
+        <circle cx="34" cy="12" r="2" fill="#38bdf8"/>
+        <circle cx="34" cy="28" r="2" fill="#38bdf8"/>
+        <circle cx="20" cy="36" r="2" fill="#38bdf8"/>
+        <circle cx="6" cy="28" r="2" fill="#38bdf8"/>
+        <circle cx="6" cy="12" r="2" fill="#38bdf8"/>
+        <circle cx="20" cy="20" r="3.5" fill="#f59e0b"/>
+      </svg>
+      <span style="font-size: 1.1rem; font-weight: 800; color: #fff;">ICAMS 2027</span>
     </div>
+    <p><strong>International Congress on Advanced Materials and Sustainability</strong></p>
+    <p><small>&copy; 2027 ICAMS. Gaviana Resort Mazatlán, Mexico. Contact: icams2027@gmail.com</small></p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
