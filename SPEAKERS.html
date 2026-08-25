@@ -4,53 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Speakers | ICAMS 2027</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container-navigation">
-      <a href="index.html" class="brand"><strong>ICAMS</strong> <span>2027</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
-      <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="nav-link">HOME</a>
-        <a href="ABOUT.html" class="nav-link">ABOUT</a>
-        <a href="TOPICS.html" class="nav-link">TOPICS</a>
-        <a href="SPEAKERS.html" class="nav-link active">SPEAKERS</a>
-        <a href="PROGRAM.html" class="nav-link">PROGRAM</a>
-        <a href="ABSTRACTS.html" class="nav-link">ABSTRACTS</a>
-        <a href="REGISTRATION.html" class="nav-link">REGISTRATION</a>
-        <a href="PUBLICATIONS.html" class="nav-link">PUBLICATIONS</a>
-        <a href="VENUE.html" class="nav-link">VENUE</a>
-        <a href="COMMITTEE.html" class="nav-link">COMMITTEE</a>
-        <a href="CONTACT.html" class="nav-link">CONTACT</a>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="url(#sun-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs>
+            <linearGradient id="sun-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff6b4a"/>
+              <stop offset="100%" stop-color="#f8961e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <span class="logo-text">ICAMS <span class="accent">2027</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="ABOUT.html">ABOUT</a>
+        <a href="TOPICS.html">TOPICS</a>
+        <a href="SPEAKERS.html" class="active">SPEAKERS</a>
+        <a href="PROGRAM.html">PROGRAM</a>
+        <a href="ABSTRACTS.html">ABSTRACTS</a>
+        <a href="REGISTRATION.html">REGISTRATION</a>
+        <a href="PUBLICATIONS.html">PUBLICATIONS</a>
+        <a href="VENUE.html">VENUE</a>
+        <a href="COMMITTEE.html">COMMITTEE</a>
+        <a href="CONTACT.html">CONTACT</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-container">
-    <section class="content-card">
-      <h1>Plenary Speakers</h1>
+  <main class="container main-content">
+    <section class="card">
+      <h2 class="section-title">Plenary Speakers</h2>
       <p>Internationally recognized researchers will present plenary lectures highlighting major advances and emerging directions in materials science and technology.</p>
-      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Plenary Speakers — Coming Soon</p>
+      <p style="color: var(--gold-warm); font-weight: bold; margin-top: 15px;">Plenary Speakers — Coming Soon</p>
     </section>
 
-    <section class="content-card">
-      <h1>Keynote Speakers</h1>
+    <section class="card">
+      <h2 class="section-title">Keynote Speakers</h2>
       <p>Leading researchers will present keynote lectures focused on recent advances in specialized areas of advanced materials.</p>
-      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Keynote Speakers — Coming Soon</p>
+      <p style="color: var(--gold-warm); font-weight: bold; margin-top: 15px;">Keynote Speakers — Coming Soon</p>
     </section>
 
-    <section class="content-card">
-      <h1>Invited Speakers</h1>
+    <section class="card">
+      <h2 class="section-title">Invited Speakers</h2>
       <p>Invited experts will present current research developments within the scientific topics of ICAMS 2027.</p>
-      <p style="color: var(--accent); font-weight: bold; margin-top: 15px;">Invited Speakers — Coming Soon</p>
+      <p style="color: var(--gold-warm); font-weight: bold; margin-top: 15px;">Invited Speakers — Coming Soon</p>
     </section>
 
-    <section class="content-card" style="border-style: dashed;">
-      <h2>Speaker Information Directory</h2>
+    <section class="card">
+      <h2 class="section-title">Speaker Information Directory</h2>
       <p>Confirmed profiles will feature:</p>
-      <ul>
+      <ul style="color: var(--text-muted); line-height: 1.8; margin-top: 10px; padding-left: 20px;">
         <li>Name</li>
         <li>Institution & Country</li>
         <li>Research Area</li>
@@ -60,17 +78,11 @@
     </section>
   </main>
 
-  <div class="modal" id="comingSoonModal" aria-hidden="true">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <h2>ICAMS 2027</h2>
-      <button class="btn" id="modalButton">Close</button>
+  <footer class="footer">
+    <div class="container">
+      <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future | Mazatlán, Mexico</p>
     </div>
-  </div>
-
-  <footer>
-    <p>ICAMS 2027 — Advanced Materials for Electronics, Energy and a Sustainable Future</p>
   </footer>
-  <script src="script.js"></script>
+
 </body>
 </html>
