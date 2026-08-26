@@ -559,3 +559,7 @@ footer strong {
   }
   .main-nav.open { display: flex; }
 }
+/* Ocultar pestaña SPEAKERS temporalmente del menú */
+a[href="SPEAKERS.html"] {
+  display: none !important;
+}
